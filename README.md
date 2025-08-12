@@ -19,7 +19,7 @@ import error_explorer
 
 # Initialize Error Explorer
 error_explorer.init(
-    webhook_url="https://your-domain.com/webhook/project-token",
+    webhook_url="https://error-explorer.com/webhook/project-token",
     project_name="my-python-app",
     environment="production"
 )
@@ -58,7 +58,7 @@ MIDDLEWARE = [
 
 ```python
 ERROR_EXPLORER = {
-    'WEBHOOK_URL': 'https://your-domain.com/webhook/project-token',
+    'WEBHOOK_URL': 'https://error-explorer.com/webhook/project-token',
     'PROJECT_NAME': 'my-django-app',
     'ENVIRONMENT': 'production',
     'ENABLED': True,
@@ -108,7 +108,7 @@ app = Flask(__name__)
 
 # Initialize Error Explorer
 error_explorer.init(
-    webhook_url="https://your-domain.com/webhook/project-token",
+    webhook_url="https://error-explorer.com/webhook/project-token",
     project_name="my-flask-app",
     environment="production"
 )
@@ -139,7 +139,7 @@ app = FastAPI()
 
 # Initialize Error Explorer
 error_explorer.init(
-    webhook_url="https://your-domain.com/webhook/project-token",
+    webhook_url="https://error-explorer.com/webhook/project-token",
     project_name="my-fastapi-app",
     environment="production"
 )
@@ -163,7 +163,7 @@ async def root():
 
 ```python
 error_explorer.init(
-    webhook_url="https://your-domain.com/webhook/project-token",
+    webhook_url="https://error-explorer.com/webhook/project-token",
     project_name="my-python-app",
     environment="production",        # Default: "production"
     enabled=True,                    # Default: True
@@ -237,7 +237,7 @@ error_explorer.set_user({
 from error_explorer import ErrorExplorer
 
 client = ErrorExplorer(
-    webhook_url="https://your-domain.com/webhook/project-token",
+    webhook_url="https://error-explorer.com/webhook/project-token",
     project_name="my-app"
 )
 
@@ -302,7 +302,7 @@ def filter_sensitive_data(data):
     return data
 
 error_explorer.init(
-    webhook_url="https://your-domain.com/webhook/project-token",
+    webhook_url="https://error-explorer.com/webhook/project-token",
     project_name="my-app",
     before_send=filter_sensitive_data
 )
@@ -314,7 +314,7 @@ The package includes a CLI tool for testing:
 
 ```bash
 # Test connection
-error-explorer test https://your-domain.com/webhook/project-token my-project
+error-explorer test https://error-explorer.com/webhook/project-token my-project
 
 # Show version
 error-explorer version
@@ -325,7 +325,7 @@ error-explorer version
 You can use environment variables for configuration:
 
 ```bash
-ERROR_EXPLORER_WEBHOOK_URL=https://your-domain.com/webhook/project-token
+ERROR_EXPLORER_WEBHOOK_URL=https://error-explorer.com/webhook/project-token
 ERROR_EXPLORER_PROJECT_NAME=my-python-app
 ERROR_EXPLORER_ENVIRONMENT=production
 ```
